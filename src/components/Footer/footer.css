@@ -1,0 +1,14 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-container .footer-icon {
+  height: 30px;
+  width: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.footer-container .footer-icon:hover {
+  color: red;
+}
