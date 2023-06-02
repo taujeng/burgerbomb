@@ -12,3 +12,17 @@
 .footer-container .footer-icon:hover {
   color: red;
 }
+.footer-container .footer-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-container .footer-links .mobile-app .android-link {
+  height: 60px;
+  width: 140px;
+}
+.footer-container .footer-links .mobile-app .apple-link {
+  width: 160px;
+  height: 40px;
+}
