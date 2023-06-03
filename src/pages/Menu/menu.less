@@ -1,0 +1,37 @@
+.menu-container {
+    width: 100%;
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .item-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            img {
+                height: 15%;
+                width: 20%;
+                // height: 150px;
+                // width: 200px;
+            }
+            // img:hover {
+            //     height: 20%;
+            //     width: 25%;
+            // }
+            b {
+                font-size: 2em;
+                text-transform: uppercase;
+            }
+        }
+        .item-body:hover + .menu-hover-text  {
+            display:block;
+        }
+        .menu-hover-text {
+            display: none;
+        }
+
+    }
+}

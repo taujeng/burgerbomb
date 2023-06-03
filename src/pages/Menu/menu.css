@@ -1,0 +1,30 @@
+.menu-container {
+  width: 100%;
+}
+.menu-container .menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-container .menu-item .item-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.menu-container .menu-item .item-body img {
+  height: 15%;
+  width: 20%;
+}
+.menu-container .menu-item .item-body b {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.menu-container .menu-item .item-body:hover + .menu-hover-text {
+  display: block;
+}
+.menu-container .menu-item .menu-hover-text {
+  display: none;
+}
