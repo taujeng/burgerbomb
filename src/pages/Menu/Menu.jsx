@@ -29,7 +29,7 @@ const Menu = () => {
       <div className="menu-row">
         <div className="menu-item">
           <div className="wrapper">
-            <img src="./images/menu/drink1.png" alt="a cold drink" className="menu-image" />
+            <img src="./images/menu/salad.png" alt="a fresh salad" className="menu-image" />
           </div>
           <div className="item-text">
             <b>Burger</b>
