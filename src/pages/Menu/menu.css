@@ -1,30 +1,50 @@
 .menu-container {
   width: 100%;
-}
-.menu-container .menu-item {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2% 0;
 }
-.menu-container .menu-item .item-body {
+.menu-container .menu-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.menu-container .menu-item {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
-}
-.menu-container .menu-item .item-body img {
   height: 15%;
-  width: 20%;
+  margin: 0 5%;
 }
-.menu-container .menu-item .item-body b {
-  font-size: 2em;
+.menu-container .menu-item .wrapper {
+  overflow: hidden;
+}
+.menu-container .menu-item .wrapper:hover .menu-image {
+  scale: 120%;
+}
+.menu-container .menu-item .menu-image {
+  height: 20em;
+  transition: scale 500ms;
+}
+.menu-container .menu-item .item-text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-container .menu-item .item-text b {
   text-transform: uppercase;
-}
-.menu-container .menu-item .item-body:hover + .menu-hover-text {
-  display: block;
+  font-size: 2em;
 }
 .menu-container .menu-item .menu-hover-text {
   display: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.menu-container .menu-item:hover .menu-hover-text {
+  display: block;
 }
