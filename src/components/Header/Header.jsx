@@ -1,21 +1,31 @@
 import React from 'react'
 import { Container, Row, Col, Stack, Navbar, NavItem, Nav, Collapse} from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 import "./header.css"
 
 const Header = () => {
   return (
-        <Navbar collapseOnSelect expand="lg" className="justify-content-center">
+        <Navbar collapseOnSelect expand="lg" className="header justify-content-center">
             <Container className="">
-                <Navbar.Brand href="https://burgerbomb.com" className='mx-auto' id="main-logo">
-                    {/* <img src="./images/logo.svg" alt="Burger Bomb" id="bomb"/> */}
-                    <h1>Burger Bomb</h1>
-                    <span className="bomb-wrapper"><img src="/images/bomb.PNG" id="bomb-logo" alt="Bomb" /></span>
-                </Navbar.Brand>
+                <LinkContainer to="/">
+                    <Navbar.Brand className='mx-auto' id="main-logo">
+                        {/* <img src="./images/logo.svg" alt="Burger Bomb" id="bomb"/> */}
+                        <h1>Burger Bomb</h1>
+                        <span className="bomb-wrapper"><img src="/images/bomb.PNG" id="bomb-logo" alt="Bomb" /></span>
+                    </Navbar.Brand>
+                </LinkContainer>
+
                 <Navbar.Toggle aria-control="responsive-nav" />
                 <Navbar.Collapse id="responsive-nav" className="justify-content-end">
-                    <Nav.Link href="">menu</Nav.Link>
-                    <Nav.Link href="">menu</Nav.Link>
-                    <Nav.Link href="">menu</Nav.Link>
+                    <LinkContainer to="/menu">
+                        <Nav.Link>Menu</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/menu">
+                        <Nav.Link>Rewards</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/menu">
+                        <Nav.Link>Our Values</Nav.Link>
+                    </LinkContainer>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

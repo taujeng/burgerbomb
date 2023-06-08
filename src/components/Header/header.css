@@ -1,8 +1,5 @@
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
+.header {
+  border-bottom: 2px darkgray solid;
 }
 .bomb-wrapper {
   overflow: hidden;
@@ -46,8 +43,11 @@
 .navbar-collapse {
   justify-content: flex-end;
 }
-.nav-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.navbar-collapse .nav-link {
+  font-size: 1.5em;
+  padding: 0 10px;
+}
+.navbar-collapse .nav-link:hover {
+  color: #ff2424;
+  font-weight: 600;
 }
