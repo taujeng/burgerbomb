@@ -1,0 +1,39 @@
+.burgers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+.burgers-container .burgers-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  width: 75%;
+  border-bottom: 1px solid grey;
+  margin-bottom: 50px;
+}
+.burgers-container main {
+  width: 60%;
+}
+.burgers-container main section ul {
+  display: flex;
+}
+.burgers-container .order-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.burgers-container .order-container button {
+  width: 150px;
+  border: 1px solid;
+  text-decoration: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background-color: #ee7e7e;
+  margin: 15px 0 15px;
+}
+.burgers-container .order-container button:hover {
+  background-color: green;
+}

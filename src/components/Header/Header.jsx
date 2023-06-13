@@ -15,7 +15,7 @@ const Header = () => {
                     </Navbar.Brand>
                 </LinkContainer>
 
-                <Navbar.Toggle aria-control="responsive-nav" />
+                <Navbar.Toggle aria-controls="responsive-nav" />
                 <Navbar.Collapse id="responsive-nav" className="justify-content-end">
                     <LinkContainer to="/menu">
                         <Nav.Link>Menu</Nav.Link>

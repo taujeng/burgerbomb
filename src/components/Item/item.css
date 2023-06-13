@@ -1,0 +1,12 @@
+.item-container {
+  width: 250px;
+  height: 100px;
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.item-container:hover {
+  border: 1px brown solid;
+}

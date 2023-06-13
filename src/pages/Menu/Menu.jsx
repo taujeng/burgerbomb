@@ -32,7 +32,7 @@ const Menu = () => {
             <img src="./images/menu/salad.png" alt="a fresh salad" className="menu-image" />
           </div>
           <div className="item-text">
-            <b>Burger</b>
+            <b>Salads</b>
           </div>
           <div className="menu-hover-text">Order now -</div>
         </div>

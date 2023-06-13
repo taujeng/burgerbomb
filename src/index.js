@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import Landing from './pages/Landing/Landing.jsx';
 import Menu from './pages/Menu/Menu.jsx'
+import Burgers from './pages/Menu/Burgers/Burgers';
 
 
 const router = createBrowserRouter(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<Landing />}/>
       <Route path="/menu" element={<Menu />}/>
+      <Route path="/menu/burgers" element={<Burgers />}/>
     </Route>
   )
 )
