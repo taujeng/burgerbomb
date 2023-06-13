@@ -11,6 +11,7 @@ import {
 import Landing from './pages/Landing/Landing.jsx';
 import Menu from './pages/Menu/Menu.jsx'
 import Burgers from './pages/Menu/Burgers/Burgers';
+import Bag from './pages/Bag/Bag';
 
 
 const router = createBrowserRouter(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<Landing />}/>
       <Route path="/menu" element={<Menu />}/>
       <Route path="/menu/burgers" element={<Burgers />}/>
+      <Route path="/bag" element={<Bag />}/>
     </Route>
   )
 )

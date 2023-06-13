@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Stack, Navbar, NavItem, Nav, Collapse} from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
+import { BagFill } from 'react-bootstrap-icons'
 import "./header.css"
 
 const Header = () => {
@@ -25,6 +26,9 @@ const Header = () => {
                     </LinkContainer>
                     <LinkContainer to="/menu">
                         <Nav.Link>Our Values</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/bag">
+                        <Nav.Link><BagFill id="bag-icon" size={32}/></Nav.Link>
                     </LinkContainer>
                 </Navbar.Collapse>
             </Container>

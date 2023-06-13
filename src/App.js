@@ -20,8 +20,8 @@ const App = () => {
 
   return (
     <div>
-      <Header />
-      <Outlet context={addToOrder}/>
+      <Header/>
+      <Outlet context={[order, setOrder]}/>
       <Footer />
     </div>
   )

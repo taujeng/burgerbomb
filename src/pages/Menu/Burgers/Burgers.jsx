@@ -2,15 +2,20 @@ import burgerData from "../../../Data/burgerData";
 import Item from "../../../components/Item/Item";
 import { useState } from 'react';
 import './burgers.css'
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
+import { v4 as uuid } from 'uuid';
+
+
 
 
 const Burgers = () => {
-    const addToOrder = useOutletContext();
+    const [order, setOrder] = useOutletContext();
     const [burgerType, setBurgerType] = useState(false);
     const [bunChoice, setBunChoice] = useState(false);
     const [vegChoices, setVegChoices] = useState([]);
     const [errorMsg, setErrorMsg] = useState(false);
+
+    const navigate = useNavigate();
     
     const addOrder = () => {
         const missingItems = [];
@@ -21,9 +26,16 @@ const Burgers = () => {
             setErrorMsg(`Don't forget the following: ${missingItems.join(", ")}!`)
         } else {
             setErrorMsg(false);
-            const burgerSummary = [];   
-            burgerSummary.push(burgerType, bunChoice, vegChoices);
-            addToOrder(burgerSummary);
+            const burgerSummary = {
+                id: uuid(),
+                burgerType: burgerType,
+                bunChoice: bunChoice,
+                vegChoices: vegChoices
+            };   
+            setOrder([...order, burgerSummary]);
+            // Navigate back to the main menu
+            navigate('/menu');
+            console.log(burgerSummary)
         }
         console.log(burgerType, bunChoice, vegChoices)
  

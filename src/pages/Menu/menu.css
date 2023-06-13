@@ -19,6 +19,7 @@
   align-items: center;
   height: 15%;
   margin: 0 5%;
+  cursor: pointer;
 }
 .menu-container .menu-item .wrapper {
   overflow: hidden;

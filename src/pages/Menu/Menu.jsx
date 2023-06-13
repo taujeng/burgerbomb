@@ -1,5 +1,6 @@
 import React from 'react'
 import "./menu.css"
+import { LinkContainer } from 'react-router-bootstrap'
 
 const Menu = () => {
 
@@ -7,15 +8,18 @@ const Menu = () => {
   return (
     <div className="menu-container">
       <div className="menu-row">
-        <div className="menu-item">
-          <div className="wrapper">
-            <img src="./images/menu/burger4.png" alt="a juicy burger" className="menu-image" />
+        <LinkContainer to='/menu/burgers'>
+          <div className="menu-item">
+            <div className="wrapper">
+              <img src="./images/menu/burger4.png" alt="a juicy burger" className="menu-image" />
+            </div>
+            <div className="item-text">
+              <b>Burger</b>
+              <div className="menu-hover-text">Order now -</div>
+            </div>
           </div>
-          <div className="item-text">
-            <b>Burger</b>
-            <div className="menu-hover-text">Order now -</div>
-          </div>
-        </div>
+        </LinkContainer>
+
         <div className="menu-item">
           <div className="wrapper">
             <img src="./images/menu/sides1.png" alt="hot sides" className="menu-image" />
