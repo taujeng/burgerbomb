@@ -1,6 +1,6 @@
 import burgerData from "../../../Data/burgerData";
 import Item from "../../../components/Item/Item";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './burgers.css'
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { v4 as uuid } from 'uuid';
@@ -10,12 +10,22 @@ import { v4 as uuid } from 'uuid';
 
 const Burgers = () => {
     const [order, setOrder] = useOutletContext();
+    const [burgerPrice, setBurgerPrice] = useState(0);
     const [burgerType, setBurgerType] = useState(false);
     const [bunChoice, setBunChoice] = useState(false);
     const [vegChoices, setVegChoices] = useState([]);
     const [errorMsg, setErrorMsg] = useState(false);
 
     const navigate = useNavigate();
+
+    useEffect(()=> {
+        let pattyPrice = burgerType ? burgerData.meat.filter((x)=> x.name == burgerType)[0].price : 0;
+        let veggieList = burgerData.veggies.filter((x)=> vegChoices.includes(x.name));
+        let veggiePrice = 0;
+        veggieList.forEach(item => veggiePrice += item.price)
+        setBurgerPrice(pattyPrice + veggiePrice)
+
+    },[burgerType, vegChoices, bunChoice])
     
     const addOrder = () => {
         const missingItems = [];
@@ -26,11 +36,13 @@ const Burgers = () => {
             setErrorMsg(`Don't forget the following: ${missingItems.join(", ")}!`)
         } else {
             setErrorMsg(false);
+            console.log(burgerData.veggies.filter((x)=> vegChoices.includes(x.name)))
+            console.log(burgerData.meat.filter((x)=> x.name == burgerType)[0].price)
             const burgerSummary = {
                 id: uuid(),
-                burgerType: burgerType,
-                bunChoice: bunChoice,
-                vegChoices: vegChoices
+                itemName: burgerType + " burger", 
+                itemPrice: burgerPrice,
+                itemDescription: [burgerType, bunChoice, ...vegChoices],
             };   
             setOrder([...order, burgerSummary]);
             // Navigate back to the main menu
@@ -103,6 +115,7 @@ const Burgers = () => {
                 ))} */}
 
             </main>
+            <div className="">Price: {burgerPrice}</div>
             <div className="order-container">
                 <button onClick={addOrder}>Add to order</button>
                 {errorMsg ? errorMsg : null}
