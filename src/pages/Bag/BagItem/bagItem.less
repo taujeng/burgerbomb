@@ -3,13 +3,28 @@
     width: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 2% 10%;
     margin-bottom: 20px;
-    .bagItem-title {
+    .bagItem-top {
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        .bagItem-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
     }
-    .ind-description {
-        padding: 5px 10px;
+    .bagItem-bot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .ind-description {
+            padding: 5px 10px;
+        }
+    }
+    .bagItem-right {
+        align-self: end;
     }
 }

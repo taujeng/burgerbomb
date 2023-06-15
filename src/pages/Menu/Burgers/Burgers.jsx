@@ -1,19 +1,22 @@
 import burgerData from "../../../Data/burgerData";
 import Item from "../../../components/Item/Item";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import './burgers.css'
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { v4 as uuid } from 'uuid';
+import { OrderContext } from "../../../App";
+import { isDisabled } from "@testing-library/user-event/dist/utils";
 
 
 
 
 const Burgers = () => {
-    const [order, setOrder] = useOutletContext();
+    const { order, setOrder } = useContext(OrderContext)
     const [burgerPrice, setBurgerPrice] = useState(0);
     const [burgerType, setBurgerType] = useState(false);
     const [bunChoice, setBunChoice] = useState(false);
     const [vegChoices, setVegChoices] = useState([]);
+    const [quantity, setQuantity] = useState(1);
     const [errorMsg, setErrorMsg] = useState(false);
 
     const navigate = useNavigate();
@@ -42,6 +45,7 @@ const Burgers = () => {
                 id: uuid(),
                 itemName: burgerType + " burger", 
                 itemPrice: burgerPrice,
+                itemQuantity: 1,
                 itemDescription: [burgerType, bunChoice, ...vegChoices],
             };   
             setOrder([...order, burgerSummary]);
@@ -74,7 +78,7 @@ const Burgers = () => {
                     </div>
                 ))} */}
                 <section>
-                    <h3>Choice of burger</h3>
+                    <h3>Choice of burger</h3><span><p>required - limit of 1</p></span>
                     <ul>
                         {burgerData.meat.map((item)=> (<Item key={item.id}
                          singleSelection={true}
@@ -83,7 +87,7 @@ const Burgers = () => {
                     </ul>
                 </section>
                 <section>
-                    <h3>Buns</h3>
+                    <h3>Buns</h3><span><p>required - limit of 1</p></span>
                     <ul>
                         {burgerData.buns.map((item)=> (<Item key={item.id} info={item}
                             singleSelection={true}
@@ -117,7 +121,8 @@ const Burgers = () => {
             </main>
             <div className="">Price: {burgerPrice}</div>
             <div className="order-container">
-                <button onClick={addOrder}>Add to order</button>
+                <button onClick={addOrder} disabled={!burgerType || !bunChoice} 
+                className={(!burgerType || !bunChoice) ? "disabled-btn" : "active-btn"}><b>Add to Order</b></button>
                 {errorMsg ? errorMsg : null}
 
             </div>

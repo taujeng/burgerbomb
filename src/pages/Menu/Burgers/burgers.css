@@ -25,15 +25,21 @@
   flex-direction: column;
   align-items: center;
 }
-.burgers-container .order-container button {
+.burgers-container .order-container .disabled-btn {
   width: 150px;
-  border: 1px solid;
+  border: white 2px solid;
   text-decoration: none;
   border-radius: 10px;
-  text-transform: uppercase;
+  color: grey;
   background-color: #ee7e7e;
   margin: 15px 0 15px;
 }
-.burgers-container .order-container button:hover {
-  background-color: green;
+.burgers-container .order-container .active-btn {
+  width: 150px;
+  border: white 2px solid;
+  text-decoration: none;
+  border-radius: 10px;
+  color: black;
+  background-color: crimson;
+  margin: 15px 0 15px;
 }
