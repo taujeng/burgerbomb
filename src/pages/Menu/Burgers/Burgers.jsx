@@ -5,7 +5,8 @@ import './burgers.css'
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { v4 as uuid } from 'uuid';
 import { OrderContext } from "../../../App";
-import { isDisabled } from "@testing-library/user-event/dist/utils";
+import { PlusCircle, DashCircle } from "react-bootstrap-icons";
+
 
 
 
@@ -28,7 +29,7 @@ const Burgers = () => {
         veggieList.forEach(item => veggiePrice += item.price)
         setBurgerPrice(pattyPrice + veggiePrice)
 
-    },[burgerType, vegChoices, bunChoice])
+    },[burgerType, vegChoices, bunChoice, quantity])
     
     const addOrder = () => {
         const missingItems = [];
@@ -45,7 +46,7 @@ const Burgers = () => {
                 id: uuid(),
                 itemName: burgerType + " burger", 
                 itemPrice: burgerPrice,
-                itemQuantity: 1,
+                itemQuantity: quantity,
                 itemDescription: [burgerType, bunChoice, ...vegChoices],
             };   
             setOrder([...order, burgerSummary]);
@@ -119,8 +120,16 @@ const Burgers = () => {
                 ))} */}
 
             </main>
-            <div className="">Price: {burgerPrice}</div>
-            <div className="order-container">
+
+            <div className="burger-total">
+                <div className="qty">
+                    <button disabled={quantity == 1} onClick={()=> {setQuantity(quantity - 1)}}><DashCircle /></button>
+                    {quantity}
+                    <button onClick={()=> setQuantity(quantity + 1)}><PlusCircle /></button>
+                </div>
+                Price: {burgerPrice * quantity}
+            </div>
+            <div className="burger-addToOrder">
                 <button onClick={addOrder} disabled={!burgerType || !bunChoice} 
                 className={(!burgerType || !bunChoice) ? "disabled-btn" : "active-btn"}><b>Add to Order</b></button>
                 {errorMsg ? errorMsg : null}

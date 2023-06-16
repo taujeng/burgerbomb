@@ -20,12 +20,22 @@
 .burgers-container main section ul {
   display: flex;
 }
-.burgers-container .order-container {
+.burgers-container .burger-total {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.burgers-container .burger-total button {
+  background: none;
+  border: none;
+}
+.burgers-container .burger-addToOrder {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.burgers-container .order-container .disabled-btn {
+.burgers-container .burger-addToOrder .disabled-btn {
   width: 150px;
   border: white 2px solid;
   text-decoration: none;
@@ -34,7 +44,7 @@
   background-color: #ee7e7e;
   margin: 15px 0 15px;
 }
-.burgers-container .order-container .active-btn {
+.burgers-container .burger-addToOrder .active-btn {
   width: 150px;
   border: white 2px solid;
   text-decoration: none;

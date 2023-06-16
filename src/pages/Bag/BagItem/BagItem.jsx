@@ -2,9 +2,11 @@ import React, {useContext} from 'react'
 import './bagItem.css'
 import { Trash } from 'react-bootstrap-icons'
 import { OrderContext } from '../../../App'
+import { DashCircle, PlusCircle } from 'react-bootstrap-icons'
 
 const BagItem = ( {item} ) => {
   const { order, setOrder } = useContext(OrderContext)
+  console.log(item, order)
 
   function handleRemove() {
     const updatedOrder = order.filter((ind) => (
@@ -13,14 +15,52 @@ const BagItem = ( {item} ) => {
     setOrder(updatedOrder);
   }
 
+  function handleIncrease() {
+    // const orderCopy = [...order];
+    // const itemIndex = orderCopy.findIndex(ind => ind.id === item.id)
+    // const updateOrder = {...orderCopy.itemIndex, itemQuantity: orderCopy[itemIndex].itemQuantity + 1}
+    // orderCopy[itemIndex] = updateOrder
+    // setOrder(orderCopy);
+    const orderCopy = [...order];
+    const itemIndex = orderCopy.findIndex(ind => ind.id === item.id);
+  
+    if (itemIndex !== -1) {
+      const updatedItem = { ...orderCopy[itemIndex] };
+      updatedItem.itemQuantity += 1;
+  
+      orderCopy[itemIndex] = updatedItem;
+      setOrder(orderCopy);
+    }
+
+  }
+
+  function handleDecrease() {
+    const orderCopy = [...order];
+    const itemIndex = orderCopy.findIndex(ind => ind.id === item.id);
+  
+    if (itemIndex !== -1) {
+      const updatedItem = { ...orderCopy[itemIndex] };
+      updatedItem.itemQuantity -= 1;
+  
+      orderCopy[itemIndex] = updatedItem;
+      setOrder(orderCopy);
+    } 
+  }
+
   return (
     <div className="bagItem-container">
+
       <div className="bagItem-top">
+        <div className="bagItem-left">
+          <button onClick={handleDecrease} disabled={item.itemQuantity === 1}><DashCircle /></button>
+            {item.itemQuantity}
+            <button onClick={handleIncrease}><PlusCircle /></button>
+        </div>
         <div className="bagItem-title">
               <h2>{item.itemName}</h2>
         </div>
-        <div className="bagItem-right">
-          {item.itemPrice}
+        <div className="bagItem-price">
+          {item.itemPrice * item.itemQuantity}
         </div>
 
       </div>

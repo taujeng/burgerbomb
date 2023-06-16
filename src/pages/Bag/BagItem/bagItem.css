@@ -10,11 +10,15 @@
 .bagItem-container .bagItem-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
 }
 .bagItem-container .bagItem-top .bagItem-title {
   display: flex;
   justify-content: space-between;
+  align-self: start;
+}
+.bagItem-container .bagItem-top .bagItem-price {
+  margin-left: auto;
 }
 .bagItem-container .bagItem-bot {
   display: flex;
