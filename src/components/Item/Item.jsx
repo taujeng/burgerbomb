@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Card } from 'react-bootstrap'
 import './item.css'
+import { formatPrice } from '../../utils/utils'
 
 const Item = ( {info, singleSelection, selection, setSelection} ) => {
   const selected = singleSelection ? selection === info.name :  selection.includes(info.name)
@@ -31,10 +32,12 @@ const Item = ( {info, singleSelection, selection, setSelection} ) => {
   return (
     <Card className="item-container" onClick={handleClick} style={{backgroundColor: selected ? "rgba(176,219,118,1.00)" : null}}>
         <Card.Title>
-            {`${info.name} ${info.price > 0 ? "- " + info.price : ""}`}
-        </Card.Title>  
+            {info.name}
+        </Card.Title>
+        {info.price > 0 ? formatPrice(info.price) : ""}  
     </Card>
   )
 }
 
 export default Item;
+    
