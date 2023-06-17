@@ -1,0 +1,17 @@
+.choices-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+.choices-container .choices-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  width: 75%;
+  border-bottom: 1px solid grey;
+  margin-bottom: 50px;
+}

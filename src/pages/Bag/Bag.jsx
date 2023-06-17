@@ -4,10 +4,16 @@ import { Button } from 'react-bootstrap';
 import "./bag.css"
 import BagItem from './BagItem/BagItem';
 import { OrderContext } from '../../App';
+import { formatPrice } from '../../utils/utils';
 
 const Bag = () => {
   const { order, setOrder } = useContext(OrderContext)
     console.log(order)
+  
+  let totalCost = 0;
+  order.forEach(item => {
+    totalCost += item["itemQuantity"] * item["itemPrice"]
+  })
 
 
   return (
@@ -15,16 +21,20 @@ const Bag = () => {
         <h1>Your bag</h1>
         {order[0] ?
         (
-        <div className="bag-options">
+        <div className="bag-full">
           {order.map((item)=> (
             <BagItem key={item.id} item={item}/>
           ))}
-          <LinkContainer to='/menu'>
-              <Button className="empty-bag-btn option">Back to the Menu</Button>
-          </LinkContainer>
-          <LinkContainer to='/'>
-              <Button className="full-bag-btn option">Finish Order</Button>
-          </LinkContainer>
+          Your Total: {formatPrice(totalCost)}
+          <div className="bag-options">
+            <LinkContainer to='/menu'>
+                <Button className="empty-bag-btn option">Back to the Menu</Button>
+            </LinkContainer>
+            <LinkContainer to='/'>
+                <Button className="full-bag-btn option">Finish Order</Button>
+            </LinkContainer>
+          </div>
+
         </div>)
         :
         <div className="empty-bag">

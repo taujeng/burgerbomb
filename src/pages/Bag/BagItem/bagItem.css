@@ -1,5 +1,5 @@
 .bagItem-container {
-  border: 2px darkgoldenrod solid;
+  border: 2px brown solid;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,19 @@
 .bagItem-container .bagItem-top {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+}
+.bagItem-container .bagItem-top .bagItem-qty {
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+.bagItem-container .bagItem-top .bagItem-qty button {
+  background: none;
+  border: none;
+}
+.bagItem-container .bagItem-top .bagItem-qty button .qty-btn {
+  height: 50px;
+  width: 20px;
 }
 .bagItem-container .bagItem-top .bagItem-title {
   display: flex;

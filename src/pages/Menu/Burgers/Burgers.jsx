@@ -79,7 +79,7 @@ const Burgers = () => {
                     </div>
                 ))} */}
                 <section>
-                    <h3>Choice of burger</h3><span><p>required - limit of 1</p></span>
+                    <h3>Choice of burger</h3><span><p>required - select 1</p></span>
                     <ul>
                         {burgerData.meat.map((item)=> (<Item key={item.id}
                          singleSelection={true}
@@ -88,7 +88,7 @@ const Burgers = () => {
                     </ul>
                 </section>
                 <section>
-                    <h3>Buns</h3><span><p>required - limit of 1</p></span>
+                    <h3>Buns</h3><span><p>required - select 1</p></span>
                     <ul>
                         {burgerData.buns.map((item)=> (<Item key={item.id} info={item}
                             singleSelection={true}

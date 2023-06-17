@@ -1,0 +1,47 @@
+.choicesItem-container {
+  display: flex;
+  margin: 20px 0;
+}
+.choicesItem-container .choicesItem-main {
+  z-index: 2;
+  min-width: 200px;
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+.choicesItem-container .choicesItem-main:hover {
+  border: 2px solid brown;
+}
+.choicesItem-container .choicesItem-side {
+  width: 150px;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+  border: 1px grey solid;
+  border-left: none;
+  display: flex;
+  flex-direction: row;
+}
+.choicesItem-container .choicesItem-side .circle-button {
+  height: 35px;
+  width: 35px;
+  border: 2px solid grey;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+  cursor: pointer;
+}
+.choicesItem-container .choicesItem-side .circle-button b {
+  margin: auto;
+}
+.choicesItem-container .choicesItem-side .circle-button:hover {
+  border: brown 2px solid;
+}
+.choicesItem-container.active .choicesItem-main {
+  background-color: #b0db76;
+}
+.choicesItem-container.active .choicesItem-side {
+  transform: translateX(0);
+}

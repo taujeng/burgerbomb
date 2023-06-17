@@ -12,11 +12,11 @@ const burgerData = {
         { id: 3, name: 'Veggie', price: 4 }
       ],
       veggies: [
-        { id: 1, name: 'No Veggies', price: 0 },
+        { id: 1, name: 'Lettuce', price: 0 },
         { id: 2, name: 'Tomato', price: 1 },
-        { id: 3, name: 'Onion', price: 3 },
-        { id: 4, name: 'Pickles', price: 0 },
-        { id: 5, name: 'Lettuce', price: 0 },
+        { id: 3, name: 'Onions', price: 1 },
+        { id: 5, name: 'Pickles', price: 0.5 },
+        { id: 6, name: 'Jalapeños', price: 0.5 },
       ],
       sauce: [
         { id: 1, name: 'Ketchup', price: 0 },

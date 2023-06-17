@@ -3,6 +3,7 @@ import './bagItem.css'
 import { Trash } from 'react-bootstrap-icons'
 import { OrderContext } from '../../../App'
 import { DashCircle, PlusCircle } from 'react-bootstrap-icons'
+import { formatPrice } from '../../../utils/utils'
 
 const BagItem = ( {item} ) => {
   const { order, setOrder } = useContext(OrderContext)
@@ -51,16 +52,16 @@ const BagItem = ( {item} ) => {
     <div className="bagItem-container">
 
       <div className="bagItem-top">
-        <div className="bagItem-left">
-          <button onClick={handleDecrease} disabled={item.itemQuantity === 1}><DashCircle /></button>
+        <div className="bagItem-qty">
+          <button onClick={handleDecrease} disabled={item.itemQuantity === 1}><DashCircle className="qty-btn"/></button>
             {item.itemQuantity}
-            <button onClick={handleIncrease}><PlusCircle /></button>
+            <button onClick={handleIncrease}><PlusCircle className="qty-btn"/></button>
         </div>
         <div className="bagItem-title">
               <h2>{item.itemName}</h2>
         </div>
         <div className="bagItem-price">
-          {item.itemPrice * item.itemQuantity}
+          {formatPrice(item.itemPrice * item.itemQuantity)}
         </div>
 
       </div>

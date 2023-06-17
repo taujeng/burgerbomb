@@ -31,15 +31,18 @@ const Menu = () => {
         </div>
       </div>
       <div className="menu-row">
-        <div className="menu-item">
-          <div className="wrapper">
-            <img src="./images/menu/salad.png" alt="a fresh salad" className="menu-image" />
+        <LinkContainer to='/menu/salads'>
+          <div className="menu-item">
+            <div className="wrapper">
+              <img src="./images/menu/salad.png" alt="a fresh salad" className="menu-image" />
+            </div>
+            <div className="item-text">
+              <b>Salads</b>
+            </div>
+            <div className="menu-hover-text">Order now -</div>
           </div>
-          <div className="item-text">
-            <b>Salads</b>
-          </div>
-          <div className="menu-hover-text">Order now -</div>
-        </div>
+        </LinkContainer>
+
         <div className="menu-item">
               <div className="wrapper">
                 <img src="./images/menu/drink1.png" alt="a cold drink" className="menu-image" />
