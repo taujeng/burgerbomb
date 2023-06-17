@@ -3,7 +3,9 @@ import ChoicesItem from '../../../components/ChoicesItem/ChoicesItem'
 import './choices.css'
 
 const Choices = ( {data} ) => {
-    const [selection, setSelections] = useState([])
+    const [name, setName] = useState(false)
+    const [size, setSize] = useState("small");
+    const [quantity, setQuantity] = useState(1);
 
     // Selection will be different from burger's data structure:
     // will send a list of objects to add to order's list.
@@ -14,6 +16,9 @@ const Choices = ( {data} ) => {
     // When adding it to the order: 
     // const newOrder = {
     //     id: uuid(),
+        //    itemName: "Chicken Salad",
+        //    itemPrice: data["price"][size],
+        //    itemDescription: [size] 
 
     // }
 
@@ -26,7 +31,9 @@ const Choices = ( {data} ) => {
         </div>
         <main>
             {data["options"].map((item, index) => (
-                <ChoicesItem key={index} info={item}/>
+                <ChoicesItem key={index} info={item}
+                name={name} size={size}
+                setName={setName} setSize={setSize}/>
             ))}
         </main>
       
