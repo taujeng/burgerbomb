@@ -18,7 +18,6 @@ const Burgers = () => {
     const [bunChoice, setBunChoice] = useState(false);
     const [vegChoices, setVegChoices] = useState([]);
     const [quantity, setQuantity] = useState(1);
-    const [errorMsg, setErrorMsg] = useState(false);
 
     const navigate = useNavigate();
 
@@ -32,28 +31,20 @@ const Burgers = () => {
     },[burgerType, vegChoices, bunChoice, quantity])
     
     const addOrder = () => {
-        const missingItems = [];
-        if (!burgerType) missingItems.push("Type of burger");
-        if (!bunChoice) missingItems.push("Choice of buns");
-        
-        if (!burgerType || !bunChoice) {
-            setErrorMsg(`Don't forget the following: ${missingItems.join(", ")}!`)
-        } else {
-            setErrorMsg(false);
-            console.log(burgerData.veggies.filter((x)=> vegChoices.includes(x.name)))
-            console.log(burgerData.meat.filter((x)=> x.name == burgerType)[0].price)
-            const burgerSummary = {
-                id: uuid(),
-                itemName: burgerType + " burger", 
-                itemPrice: burgerPrice,
-                itemQuantity: quantity,
-                itemDescription: [burgerType, bunChoice, ...vegChoices],
-            };   
-            setOrder([...order, burgerSummary]);
-            // Navigate back to the main menu
-            navigate('/menu');
-            console.log(burgerSummary)
-        }
+        console.log(burgerData.veggies.filter((x)=> vegChoices.includes(x.name)))
+        console.log(burgerData.meat.filter((x)=> x.name == burgerType)[0].price)
+        const burgerSummary = {
+            id: uuid(),
+            itemName: burgerType + " burger", 
+            itemPrice: burgerPrice,
+            itemQuantity: quantity,
+            itemDescription: [burgerType, bunChoice, ...vegChoices],
+        };   
+        setOrder([...order, burgerSummary]);
+        // Navigate back to the main menu
+        navigate('/menu');
+        console.log(burgerSummary)
+
         console.log(burgerType, bunChoice, vegChoices)
  
     }
@@ -132,7 +123,6 @@ const Burgers = () => {
             <div className="burger-addToOrder">
                 <button onClick={addOrder} disabled={!burgerType || !bunChoice} 
                 className={(!burgerType || !bunChoice) ? "disabled-btn" : "active-btn"}><b>Add to Order</b></button>
-                {errorMsg ? errorMsg : null}
 
             </div>
         </div>   

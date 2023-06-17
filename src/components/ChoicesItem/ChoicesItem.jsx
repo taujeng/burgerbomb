@@ -30,11 +30,11 @@ const ChoicesItem = ( {info, name, setName, size, setSize} ) => {
             <Card.Title>{info.name}</Card.Title>
             {formatPrice(info["price"][size])}
         </button>
-        <button className="choicesItem-side" disabled={name !== false && name !== info.name}>
+        <div className="choicesItem-side" disabled={name !== false && name !== info.name}>
             <div className={`circle-button ${size === "small" ? "selected": ""}`} onClick={()=> setSize("small")}><b>S</b></div>
             <div className={`circle-button ${size === "medium" ? "selected": ""}`} onClick={()=> setSize("medium")}><b>M</b></div>
             <div className={`circle-button ${size === "large" ? "selected": ""}`} onClick={()=> setSize("large")}><b>L</b></div>
-        </button>
+        </div>
     </div>
   )
 }

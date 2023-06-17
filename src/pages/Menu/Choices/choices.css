@@ -15,3 +15,13 @@
   border-bottom: 1px solid grey;
   margin-bottom: 50px;
 }
+.choices-container .choices-total {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.choices-container .choices-total button {
+  background: none;
+  border: none;
+}

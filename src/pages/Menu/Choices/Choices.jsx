@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import ChoicesItem from '../../../components/ChoicesItem/ChoicesItem'
 import './choices.css'
+import { PlusCircle, DashCircle } from "react-bootstrap-icons";
 
 const Choices = ( {data} ) => {
     const [name, setName] = useState(false)
@@ -22,6 +23,22 @@ const Choices = ( {data} ) => {
 
     // }
 
+    // const orderSummary = name ? data.options.filter((x) => (
+    //     x.name === name
+    // )) : [{price: {small: 0, medium: 0, large: 0}}];
+    // console.log(orderSummary)
+    // const orderPrice = orderSummary[0]["price"][size]
+
+    let orderSummary;
+    let orderPrice = 0;
+
+    if (name) {
+        orderSummary =  data.options.filter((x) => (
+            x.name === name
+        ))
+        orderPrice = orderSummary[0]["price"][size]
+    }
+
   return (
     <div className="choices-container">
         <div className="choices-intro">
@@ -36,6 +53,14 @@ const Choices = ( {data} ) => {
                 setName={setName} setSize={setSize}/>
             ))}
         </main>
+        <div className="choices-total">
+                <div className="qty">
+                    <button disabled={quantity == 1} onClick={()=> {setQuantity(quantity - 1)}}><DashCircle /></button>
+                    {quantity}
+                    <button onClick={()=> setQuantity(quantity + 1)}><PlusCircle /></button>
+                </div>
+                Price: {orderPrice * quantity}
+            </div>
       
     </div>
   )
