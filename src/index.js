@@ -13,7 +13,7 @@ import Menu from './pages/Menu/Menu.jsx'
 import Burgers from './pages/Menu/Burgers/Burgers';
 import Bag from './pages/Bag/Bag';
 import Choices from './pages/Menu/Choices/Choices';
-import saladData from '../src/Data/saladData';
+import saladData from './Data/saladData';
 
 
 const router = createBrowserRouter(

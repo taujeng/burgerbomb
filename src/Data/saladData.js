@@ -1,4 +1,3 @@
-
 const saladData = {
     intro: {
         title: 'Build your custom',
@@ -6,10 +5,11 @@ const saladData = {
         description: 'Our delicious handcrafted salads always use the freshest ingredients!',
     },
     options: [
-        { id: 1, name: 'Garden Salad', price: { small: 8.99, medium: 10.99, large: 12.99 } },
-        { id: 2, name: 'Caesar Salad', price: { small: 9.99, medium: 11.99, large: 13.99 } },
-        { id: 3, name: 'Greek Salad', price: { small: 10.99, medium: 12.99, large: 14.99 } },
+        { id: 1, name: 'Garden Salad', price: { small: 4.00, medium: 5.50, large: 7.00 } },
+        { id: 2, name: 'Caesar Salad', price: { small: 5.00, medium: 6.50, large: 8.00 } },
+        { id: 3, name: 'Greek Salad', price: { small: 6.00, medium: 7.50, large: 9.00 } },
     ],
 };
+  
 
 export default saladData;
