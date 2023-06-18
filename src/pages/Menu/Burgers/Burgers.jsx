@@ -13,6 +13,7 @@ import { PlusCircle, DashCircle } from "react-bootstrap-icons";
 
 const Burgers = () => {
     const { order, setOrder } = useContext(OrderContext)
+    
     const [burgerPrice, setBurgerPrice] = useState(0);
     const [burgerType, setBurgerType] = useState(false);
     const [bunChoice, setBunChoice] = useState(false);
@@ -122,8 +123,7 @@ const Burgers = () => {
             </div>
             <div className="burger-addToOrder">
                 <button onClick={addOrder} disabled={!burgerType || !bunChoice} 
-                className={(!burgerType || !bunChoice) ? "disabled-btn" : "active-btn"}><b>Add to Order</b></button>
-
+                className={(!burgerType || !bunChoice) ? "disabled-btn" : "active-btn"}><b>Add to Order</b></button> 
             </div>
         </div>   
     )
