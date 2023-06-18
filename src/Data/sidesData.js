@@ -10,3 +10,5 @@ const sidesData = {
         { id: 3, name: 'Mozzarella Sticks', price: { small: 5.99, medium: 6.99, large: 7.99 } },
     ],
 };
+
+export default sidesData;

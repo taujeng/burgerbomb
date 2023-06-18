@@ -6,6 +6,7 @@ import { useOutletContext, useNavigate } from "react-router-dom";
 import { v4 as uuid } from 'uuid';
 import { OrderContext } from "../../../App";
 import { PlusCircle, DashCircle } from "react-bootstrap-icons";
+import { formatPrice } from "../../../utils/utils";
 
 
 
@@ -13,7 +14,7 @@ import { PlusCircle, DashCircle } from "react-bootstrap-icons";
 
 const Burgers = () => {
     const { order, setOrder } = useContext(OrderContext)
-    
+
     const [burgerPrice, setBurgerPrice] = useState(0);
     const [burgerType, setBurgerType] = useState(false);
     const [bunChoice, setBunChoice] = useState(false);
@@ -119,7 +120,7 @@ const Burgers = () => {
                     {quantity}
                     <button onClick={()=> setQuantity(quantity + 1)}><PlusCircle /></button>
                 </div>
-                Price: {burgerPrice * quantity}
+                Price: {formatPrice(burgerPrice * quantity)}
             </div>
             <div className="burger-addToOrder">
                 <button onClick={addOrder} disabled={!burgerType || !bunChoice} 

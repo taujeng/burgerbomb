@@ -5,6 +5,7 @@ import { PlusCircle, DashCircle } from "react-bootstrap-icons";
 import { OrderContext } from '../../../App';
 import { v4 as uuid} from 'uuid';
 import { useNavigate } from 'react-router-dom';
+import { formatPrice } from '../../../utils/utils';
 
 const Choices = ( {data} ) => {
     // data such as /Data/saladData.js
@@ -84,7 +85,7 @@ const Choices = ( {data} ) => {
                     {quantity}
                     <button onClick={()=> setQuantity(quantity + 1)}><PlusCircle /></button>
                 </div>
-                Price: {orderPrice * quantity}
+                Price: {formatPrice(orderPrice * quantity)}
         </div>
         <div className="choices-addToOrder">
                 <button onClick={addOrder} disabled={!name || !size} 

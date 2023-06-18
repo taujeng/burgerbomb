@@ -1,5 +1,3 @@
-
-
 const drinksData = {
     intro: {
         title: 'Quench your thirst with',
@@ -12,3 +10,5 @@ const drinksData = {
         { id: 3, name: 'Lemonade', price: { small: 2.49, medium: 2.99, large: 3.49 },  iceOptions: ['Ice', 'No Ice'], },
     ],
 };
+
+export default drinksData

@@ -19,16 +19,18 @@ const Menu = () => {
             </div>
           </div>
         </LinkContainer>
+        <LinkContainer to='/menu/sides'>
+          <div className="menu-item">
+            <div className="wrapper">
+              <img src="./images/menu/sides1.png" alt="hot sides" className="menu-image" />
+            </div>
+            <div className="item-text">
+              <b>Sides</b>
+              <div className="menu-hover-text">Order now -</div>
+            </div>
+          </div>
+        </LinkContainer>
 
-        <div className="menu-item">
-          <div className="wrapper">
-            <img src="./images/menu/sides1.png" alt="hot sides" className="menu-image" />
-          </div>
-          <div className="item-text">
-            <b>Sides</b>
-            <div className="menu-hover-text">Order now -</div>
-          </div>
-        </div>
       </div>
       <div className="menu-row">
         <LinkContainer to='/menu/salads'>
@@ -42,17 +44,19 @@ const Menu = () => {
             <div className="menu-hover-text">Order now -</div>
           </div>
         </LinkContainer>
+        <LinkContainer to='/menu/drinks'>
+          <div className="menu-item">
+                <div className="wrapper">
+                  <img src="./images/menu/drink1.png" alt="a cold drink" className="menu-image" />
 
-        <div className="menu-item">
-              <div className="wrapper">
-                <img src="./images/menu/drink1.png" alt="a cold drink" className="menu-image" />
+                </div>
+                <div className="item-text">
+                  <b>Drinks</b>
+                  <div className="menu-hover-text">Order now -</div>
+                </div>
+          </div>
+        </LinkContainer>
 
-              </div>
-              <div className="item-text">
-                <b>Drinks</b>
-                <div className="menu-hover-text">Order now -</div>
-              </div>
-        </div>
       </div>
     </div>
   )

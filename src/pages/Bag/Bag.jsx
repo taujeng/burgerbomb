@@ -30,8 +30,8 @@ const Bag = () => {
             <LinkContainer to='/menu'>
                 <Button className="empty-bag-btn option">Back to the Menu</Button>
             </LinkContainer>
-            <LinkContainer to='/'>
-                <Button className="full-bag-btn option">Finish Order</Button>
+            <LinkContainer to='/checkout'>
+                <Button className="full-bag-btn option">Place Order</Button>
             </LinkContainer>
           </div>
 
