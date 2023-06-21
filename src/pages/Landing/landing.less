@@ -1,26 +1,121 @@
-#landing {
-    height: 90%;
-    width: 100%;
-    position: absolute;
-}
+
 
 .landing-container{
-    background-image: url("../../../public/images/hamburger.jpg");
-    background-size: cover;
-    z-index: 10;
-    height: 100vh;
-    width: 100vw;
-    .landing-text {
-        color: white;
-        padding-left: 70vw;
-        padding-top: 20vh;
-        font-size: 1.5em;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    .landing-hero {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        // background-image: url("../../../public/images/hamburger.jpg");
+        // background-size: cover;
+        // background-position: center center;
+        .landing-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            // height: 100vh;
+            width: 100%;
+            object-fit: cover;
+        }
+        .landing-text {
+            color: white;
+            padding-left: 70vw;
+            padding-top: 20vh;
+            font-size: 1.5em;
+            transform: translate(-10%, -20%);
+            z-index: 20;
+            .landing-btn {
+                margin: 2em 0 0 2em;
+                background-color: crimson;
+                border: white 2px solid; 
+            }
+        }
+    }
+    .landing-two {
+        margin: 7% 0 2%;
+        padding: 0 10%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .landing-left {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                max-height: 100%;
+                max-width: 100%;
+                height: 50%;
+                width: 50%;
+            }
+        }
+        .landing-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            padding: 0 10%;
+        }
+        @media (max-width: 768px) {
+            .landing-right {
+                width: 100vw;
+            }
+        }
 
     }
-    .landing-btn {
-        margin: 2em 0 0 2em;
-        background-color: crimson;
-        border: white 2px solid; 
+    .landing-mobile-veg {
+        display: none;
     }
+
+
 }
 
+@media (max-width: 768px) {
+    .landing-container {
+        width: 100%;
+        position: relative;
+        .landing-hero {
+            background-image: url("../../../public/images/hamburger-mobile.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            .landing-img {
+                display: none;
+            }
+            .landing-text {
+                padding: 0;
+                font-size: 1em;
+                // transform: translate(-30%,-90%);
+                position: absolute;
+                top: 9%;
+                left: 35%;
+            }
+        }
+        .landing-two {
+            .landing-left {
+                display: none;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+        }
+        .landing-right {
+            .landing-mobile-veg {
+                display: inline;
+                width: 100vw;
+            }
+        }
+    }
+}

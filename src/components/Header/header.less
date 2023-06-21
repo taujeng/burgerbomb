@@ -1,5 +1,7 @@
 .header {
     border-bottom: 2px darkgray solid;
+    // height: 10vh;
+    z-index: 10;
 }
 
 
@@ -55,6 +57,25 @@
         color: #ff2424;
         font-weight: 600;
     }
+}
+
+@media (max-width:768px) {
+    #bomb-logo {
+        height: 35px;
+        width: 35px;
+    }
+    .navbar-collapse {
+        width: 100vw !important;
+        padding: 0 10%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        .nav-link {
+
+        }
+    }
+    
 }
 
 

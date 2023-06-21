@@ -1,5 +1,6 @@
 .header {
   border-bottom: 2px darkgray solid;
+  z-index: 10;
 }
 .bomb-wrapper {
   overflow: hidden;
@@ -54,4 +55,18 @@
 .navbar-collapse .nav-link:hover {
   color: #ff2424;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  #bomb-logo {
+    height: 35px;
+    width: 35px;
+  }
+  .navbar-collapse {
+    width: 100vw !important;
+    padding: 0 10%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 }
