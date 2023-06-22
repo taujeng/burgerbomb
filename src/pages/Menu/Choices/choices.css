@@ -48,3 +48,10 @@
   background-color: crimson;
   margin: 15px 0 15px;
 }
+@media (max-width: 768px) {
+  .choices-container .choices-total {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+}

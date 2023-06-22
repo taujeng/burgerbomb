@@ -2,7 +2,7 @@ const sidesData = {
     intro: {
         title: 'Choose your favorite',
         subtitle: 'Side',
-        description: 'Complete your meal with our tasty side options!',
+        description: 'Complete your meal with our tasty sides!',
     },
     options: [
         { id: 1, name: 'French Fries', price: { small: 3.99, medium: 4.99, large: 5.99 } },
