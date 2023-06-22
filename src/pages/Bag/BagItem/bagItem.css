@@ -43,3 +43,25 @@
 .bagItem-container .bagItem-right {
   align-self: end;
 }
+@media (max-width: 768px) {
+  .bagItem-container {
+    padding: 2% 2%;
+  }
+  .bagItem-container .bagItem-top .bagItem-title {
+    flex-wrap: wrap;
+  }
+  .bagItem-container .bagItem-top .bagItem-qty {
+    white-space: nowrap;
+  }
+  .bagItem-container .bagItem-top .bagItem-qty button .qty-btn {
+    height: 35px;
+    width: 15px;
+  }
+  .bagItem-container .bagItem-bot .group-description {
+    padding: 0 5px;
+  }
+  .bagItem-container .bagItem-bot .group-description .ind-description {
+    display: inline-block;
+    padding: 2px 4px;
+  }
+}

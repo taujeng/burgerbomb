@@ -44,3 +44,32 @@
         align-self: end;
     }
 }
+
+@media (max-width: 768px) {
+    .bagItem-container {
+        padding: 2% 2%;
+        .bagItem-top {
+            .bagItem-title {
+                flex-wrap: wrap;
+            }
+            .bagItem-qty {
+                white-space: nowrap;
+                button {
+                    .qty-btn {
+                        height: 35px;
+                        width: 15px;
+                    }
+                }
+            }
+        }
+        .bagItem-bot {
+            .group-description {
+                padding: 0 5px;
+                .ind-description {
+                    display: inline-block;
+                    padding: 2px 4px;
+                }
+            }
+        }
+    }
+}

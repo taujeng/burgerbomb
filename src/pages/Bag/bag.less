@@ -6,6 +6,7 @@
     align-items: center;
     h1 {
         align-self: center;
+        margin-bottom: 25px;
     }
 
     .bag-full {
@@ -38,6 +39,18 @@
             background-color: crimson;
             border: white 2px solid; 
             width: 100px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .bag-container {
+        padding: 25px 0;
+        h1 {
+            margin-bottom: 25px;
+        }
+        .bag-full {
+            width: 100%;
         }
     }
 }

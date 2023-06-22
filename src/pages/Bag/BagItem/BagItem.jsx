@@ -66,7 +66,7 @@ const BagItem = ( {item} ) => {
 
       </div>
       <div className="bagItem-bot">
-        <div>
+        <div className="group-description">
             {item.itemDescription.map((ingredient, index) => (
                 <span className="ind-description" key={index}>• {ingredient}</span>
             ))}
