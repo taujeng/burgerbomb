@@ -1,5 +1,5 @@
 // Introducing Burger Bomb, where every bite bursts with flavor! We take pride in crafting custom-made burgers using only the freshest ingredients sourced from local farmers. Our commitment to quality starts from the ground up, as we carefully select the finest produce and meat, ensuring that each ingredient is at its peak of freshness.
-
+<div className="menu-hover-text">Order now -</div>
 // By partnering with local farmers, we support our community and promote sustainability. We believe in the power of farm-to-table dining, where you can taste the difference in every bite. From crisp lettuce and ripe tomatoes to juicy beef and tender chicken, our ingredients are thoughtfully chosen to create a mouthwatering experience you won't forget.
 
 // At Burger Bomb, we value the connection between food and the land it comes from. Our dedication to using locally sourced ingredients not only guarantees exceptional taste but also reduces our carbon footprint. It's a win-win for your taste buds and the environment!
