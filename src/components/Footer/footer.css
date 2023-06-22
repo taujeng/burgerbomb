@@ -28,3 +28,16 @@
   width: 160px;
   height: 40px;
 }
+@media (max-width: 768px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-links .socialMedia-links {
+    display: flex;
+  }
+  .footer-links .mobile-app {
+    display: flex;
+    align-items: center;
+  }
+}
