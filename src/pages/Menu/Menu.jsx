@@ -15,7 +15,7 @@ const Menu = () => {
             </div>
             <div className="item-text">
               <b>Burger</b>
-              <div className="menu-hover-text">Order now -</div>
+              
             </div>
           </div>
         </LinkContainer>
@@ -26,7 +26,7 @@ const Menu = () => {
             </div>
             <div className="item-text">
               <b>Sides</b>
-              <div className="menu-hover-text">Order now -</div>
+              
             </div>
           </div>
         </LinkContainer>
@@ -41,7 +41,6 @@ const Menu = () => {
             <div className="item-text">
               <b>Salads</b>
             </div>
-            <div className="menu-hover-text">Order now -</div>
           </div>
         </LinkContainer>
         <LinkContainer to='/menu/drinks'>
@@ -52,7 +51,7 @@ const Menu = () => {
                 </div>
                 <div className="item-text">
                   <b>Drinks</b>
-                  <div className="menu-hover-text">Order now -</div>
+                  
                 </div>
           </div>
         </LinkContainer>
