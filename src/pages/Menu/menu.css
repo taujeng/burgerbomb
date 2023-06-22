@@ -49,3 +49,13 @@
 .menu-container .menu-item:hover .menu-hover-text {
   display: block;
 }
+@media (max-width: 768px) {
+  .menu-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-row .menu-item {
+    flex-direction: column;
+  }
+}
