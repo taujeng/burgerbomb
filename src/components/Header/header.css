@@ -1,6 +1,35 @@
+@font-face {
+  font-family: 'Belanosima';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/belanosima/v1/3y9k6bI8ejDo_3MfCDSLxAA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Belanosima';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/belanosima/v1/3y9n6bI8ejDo_3MfCDSL_Nh1M3o.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Belanosima';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/belanosima/v1/3y9n6bI8ejDo_3MfCDSL_Lx0M3o.ttf) format('truetype');
+}
 .header {
   border-bottom: 2px darkgray solid;
   z-index: 10;
+}
+#main-logo h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#main-logo h1:hover {
+  color: crimson;
+  animation: tilt-shaking 0.25s infinite;
 }
 .bomb-wrapper {
   overflow: hidden;
@@ -23,13 +52,13 @@
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(5deg);
+    transform: rotate(2deg);
   }
   50% {
     transform: rotate(0eg);
   }
   75% {
-    transform: rotate(-5deg);
+    transform: rotate(-2deg);
   }
   100% {
     transform: rotate(0deg);

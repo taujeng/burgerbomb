@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
+// regular: 400, semibold: 600, bold: 700
+
+
 .header {
     border-bottom: 2px darkgray solid;
     // height: 10vh;
     z-index: 10;
+    background-color: lightcyan;
 }
 
+#main-logo {
+    h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    h1:hover{
+        color: crimson;
+        animation: tilt-shaking 0.25s infinite;
+    }
+}
 
 .bomb-wrapper {
     overflow: hidden;
@@ -28,9 +43,9 @@
 
 @keyframes tilt-shaking {
     0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
+    25% { transform: rotate(2deg); }
     50% { transform: rotate(0eg); }
-    75% { transform: rotate(-5deg); }
+    75% { transform: rotate(-2deg); }
     100% { transform: rotate(0deg); }
   }
 
@@ -43,21 +58,27 @@
     margin-right: auto !important;
 }
 
-.navbar-collapse{
+
+.navbar-collapse {
     justify-content: flex-end;
     align-items: center;
+    background-color: lightcyan;
+
     .nav-link {
-        font-size: 1.5em;
+        font-size: 2em;
+        font-weight: 600;
         padding: 0 10px;
         #bag-icon {
             margin: 0 0 10px 20px;
         }
     }
     .nav-link:hover {
-        color: #ff2424;
+        color: #crimson;
         font-weight: 600;
     }
 }
+
+
 
 @media (max-width:768px) {
     #bomb-logo {

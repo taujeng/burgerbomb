@@ -12,12 +12,12 @@ const Header = () => {
                     <Navbar.Brand className='mx-auto' id="main-logo">
                         {/* <img src="./images/logo.svg" alt="Burger Bomb" id="bomb"/> */}
                         <h1>Burger Bomb</h1>
-                        <span className="bomb-wrapper"><img src="/images/bomb.PNG" id="bomb-logo" alt="Bomb" /></span>
+                        {/* <span className="bomb-wrapper"><img src="/images/bomb.PNG" id="bomb-logo" alt="Bomb" /></span> */}
                     </Navbar.Brand>
                 </LinkContainer>
 
                 <Navbar.Toggle aria-controls="responsive-nav" />
-                <Navbar.Collapse id="responsive-nav" className="justify-content-end">
+                <Navbar.Collapse id="responsive-nav" className="header-links justify-content-end">
                     <LinkContainer to="/menu">
                         <Nav.Link>Menu</Nav.Link>
                     </LinkContainer>
