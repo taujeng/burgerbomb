@@ -43,8 +43,8 @@ const Burgers = () => {
             itemDescription: [burgerType, bunChoice, ...vegChoices],
         };   
         setOrder([...order, burgerSummary]);
-        // Navigate back to the main menu
-        navigate('/menu');
+        // Navigate back to menu
+        navigate('/menu/');
         console.log(burgerSummary)
 
         console.log(burgerType, bunChoice, vegChoices)

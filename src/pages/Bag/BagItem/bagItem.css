@@ -15,7 +15,7 @@
 }
 .bagItem-container .bagItem-top .bagItem-qty {
   margin: 0 10px;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .bagItem-container .bagItem-top .bagItem-qty button {
   background: none;
@@ -28,10 +28,14 @@
 .bagItem-container .bagItem-top .bagItem-title {
   display: flex;
   justify-content: space-between;
-  align-self: start;
+  align-self: center;
+}
+.bagItem-container .bagItem-top .bagItem-title h2 {
+  margin-bottom: 0;
 }
 .bagItem-container .bagItem-top .bagItem-price {
   margin-left: auto;
+  font-size: 1.5em;
 }
 .bagItem-container .bagItem-bot {
   display: flex;
@@ -43,13 +47,20 @@
 }
 .bagItem-container .bagItem-right {
   align-self: end;
+  font-size: 1.3em;
 }
 @media (max-width: 768px) {
   .bagItem-container {
     padding: 2% 2%;
   }
+  .bagItem-container .bagItem-top {
+    margin-bottom: 0;
+  }
   .bagItem-container .bagItem-top .bagItem-title {
     flex-wrap: wrap;
+  }
+  .bagItem-container .bagItem-top .bagItem-title h2 {
+    margin-bottom: 0;
   }
   .bagItem-container .bagItem-top .bagItem-qty {
     white-space: nowrap;

@@ -10,12 +10,24 @@
         min-width: 200px;
         border: 2px solid grey;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         padding: 20px;
         border-radius: 0.25rem;
         background-color: #fff;
+        .choicesItem-main-body {
+            flex-direction: column;
+        }
+        .choicesItem-main-side {
+            font-size: 2em;
+            .extension {
+                cursor: pointer;
+            }
+            .extension:hover {
+                color: brown;
+            }   
+            
+        }
     }
     .choicesItem-main:hover {
         border: 2px solid brown;

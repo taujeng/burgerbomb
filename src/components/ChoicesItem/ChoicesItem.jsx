@@ -2,38 +2,52 @@ import React, {useState} from 'react'
 import { Card } from 'react-bootstrap'
 import './choicesItem.css'
 import { formatPrice } from '../../utils/utils'
+import { ChevronCompactRight, ChevronCompactLeft } from 'react-bootstrap-icons'
 
-const ChoicesItem = ( {info, name, setName, size, setSize} ) => {
+const ChoicesItem = ( {info, name, setName, setSizes} ) => {
     const [open, setOpen] = useState(false);
+    const [size, setSize] = useState("small");
 
     const selected = name === info.name
 
     function handleMain() {
         console.log(name)
-        setOpen(!open);
         if (name === info.name) {
             setName(false);
-        } else if (!name) {
-            setName(info.name)
         } else {
-            console.log("multiple")
+            setName(info.name)
         }
+        setSizes(prev => (
+            {...prev, [info.name]: size}
+        ))
     }
     // disabled={name !== false && name !== info.name}
+    function handleSizeChange(selectedSize) {
+        setSize(selectedSize);
+        setSizes(prev => (
+            {...prev, [info.name]: selectedSize}
+        ))
+    }
+
 
 
   return (
-    <div className={`choicesItem-container ${open && "active"}` } >
+    <div className={`choicesItem-container ${open ? "active" : ""}` } >
         <button className={`choicesItem-main ${selected ? "selected": ""}`}
-         onClick={handleMain}
-         disabled={name !== false && name !== info.name}>
-            <Card.Title>{info.name}</Card.Title>
-            {formatPrice(info["price"][size])}
+         onClick={handleMain}>
+            <div className="choicesItem-main-body">
+                <Card.Title>{info.name}</Card.Title>
+                {formatPrice(info["price"][size])}
+            </div>
+            <div className="choicesItem-main-side" onClick={(e)=> {e.stopPropagation();  setOpen(!open)}}>
+                {open ? <ChevronCompactLeft className="extension" /> 
+                : <ChevronCompactRight className="extension" onClick={()=> setOpen(true)} />}
+            </div>
         </button>
-        <div className="choicesItem-side" disabled={name !== false && name !== info.name}>
-            <div className={`circle-button ${size === "small" ? "selected": ""}`} onClick={()=> setSize("small")}><b>S</b></div>
-            <div className={`circle-button ${size === "medium" ? "selected": ""}`} onClick={()=> setSize("medium")}><b>M</b></div>
-            <div className={`circle-button ${size === "large" ? "selected": ""}`} onClick={()=> setSize("large")}><b>L</b></div>
+        <div className="choicesItem-side">
+            <div className={`circle-button ${size === "small" ? "selected": ""}`} onClick={()=> handleSizeChange("small")}><b>S</b></div>
+            <div className={`circle-button ${size === "medium" ? "selected": ""}`} onClick={()=> handleSizeChange("medium")}><b>M</b></div>
+            <div className={`circle-button ${size === "large" ? "selected": ""}`} onClick={()=> handleSizeChange("large")}><b>L</b></div>
         </div>
     </div>
   )

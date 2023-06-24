@@ -13,7 +13,7 @@
         justify-content: center;
         .bagItem-qty {
             margin: 0 10px;
-            font-size: 1.5em;
+            font-size: 1.3em;
             button {
                 background: none;
                 border: none;
@@ -26,10 +26,14 @@
         .bagItem-title {
             display: flex;
             justify-content: space-between;
-            align-self: start;
+            align-self: center;
+            h2 {
+                margin-bottom: 0;
+            }
         }
         .bagItem-price {
             margin-left: auto;
+            font-size: 1.5em;
         }
 
     }
@@ -43,6 +47,7 @@
     }
     .bagItem-right {
         align-self: end;
+        font-size: 1.3em;
     }
 }
 
@@ -50,8 +55,12 @@
     .bagItem-container {
         padding: 2% 2%;
         .bagItem-top {
+            margin-bottom: 0;
             .bagItem-title {
                 flex-wrap: wrap;
+                h2 {
+                    margin-bottom: 0;
+                }
             }
             .bagItem-qty {
                 white-space: nowrap;

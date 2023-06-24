@@ -12,7 +12,7 @@ const Choices = ( {data} ) => {
     const {order, setOrder} = useContext(OrderContext);
 
     const [name, setName] = useState(false)
-    const [size, setSize] = useState("small");
+    const [sizes, setSizes] = useState({});
     const [quantity, setQuantity] = useState(1);
 
     const navigate = useNavigate();
@@ -46,7 +46,7 @@ const Choices = ( {data} ) => {
         orderSummary =  data["options"].filter((x) => (
             x.name === name
         ))
-        orderPrice = orderSummary[0]["price"][size]
+        orderPrice = orderSummary[0]["price"][sizes[name]]
     }
 
     function addOrder() {
@@ -55,9 +55,8 @@ const Choices = ( {data} ) => {
             itemName: name, 
             itemPrice: orderPrice,
             itemQuantity: quantity,
-            itemDescription: [size]
+            itemDescription: [sizes[name]]
         }
-        console.log(`Summary: ${summary}`)
         setOrder([...order, summary])
         navigate('/menu');
     }
@@ -75,8 +74,8 @@ const Choices = ( {data} ) => {
         <main>
             {data.options.map((item, index) => (
                 <ChoicesItem key={index} info={item}
-                name={name} size={size}
-                setName={setName} setSize={setSize}/>
+                name={name}
+                setName={setName} setSizes={setSizes}/>
             ))}
         </main>
         <div className="choices-total">
@@ -88,8 +87,8 @@ const Choices = ( {data} ) => {
                 Price: {formatPrice(orderPrice * quantity)}
         </div>
         <div className="choices-addToOrder">
-                <button onClick={addOrder} disabled={!name || !size} 
-                className={(!name || !size) ? "disabled-btn" : "active-btn"}><b>Add to Order</b></button> 
+                <button onClick={addOrder} disabled={!name} 
+                className={!name ? "disabled-btn" : "active-btn"}><b>Add to Order</b></button> 
         </div>
       
     </div>

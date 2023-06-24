@@ -8,12 +8,23 @@
   min-width: 200px;
   border: 2px solid grey;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
   border-radius: 0.25rem;
   background-color: #fff;
+}
+.choicesItem-container .choicesItem-main .choicesItem-main-body {
+  flex-direction: column;
+}
+.choicesItem-container .choicesItem-main .choicesItem-main-side {
+  font-size: 2em;
+}
+.choicesItem-container .choicesItem-main .choicesItem-main-side .extension {
+  cursor: pointer;
+}
+.choicesItem-container .choicesItem-main .choicesItem-main-side .extension:hover {
+  color: brown;
 }
 .choicesItem-container .choicesItem-main:hover {
   border: 2px solid brown;

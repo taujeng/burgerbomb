@@ -15,7 +15,7 @@ const Item = ( {info, singleSelection, selection, setSelection} ) => {
       } else if (info.name === selection) {
         setSelection(false)
       } else {
-        alert("Only one selection please!")
+        setSelection(info.name)
       }
     } else {
       if (!selection.includes(info.name)) {
