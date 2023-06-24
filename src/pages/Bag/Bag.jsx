@@ -25,7 +25,7 @@ const Bag = () => {
           {order.map((item)=> (
             <BagItem key={item.id} item={item}/>
           ))}
-          Your Total: {formatPrice(totalCost)}
+          <div className="bag-pricing">Your Total: {formatPrice(totalCost)}</div>
           <div className="bag-options">
             <LinkContainer to='/menu'>
                 <Button className="empty-bag-btn option">Back to the Menu</Button>

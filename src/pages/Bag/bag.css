@@ -17,6 +17,9 @@
   justify-content: center;
   align-items: center;
 }
+.bag-container .bag-full .bag-pricing {
+  font-size: 1.5em;
+}
 .bag-container .full-bag-btn {
   background-color: green;
   border: white 2px solid;
