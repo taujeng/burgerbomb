@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
 
+
+:root {
+    --title: rgb(173, 33, 24);
+    --header-primary: #451400;
+    --header-primary-hover: #ad2118;
+    --header-secondary: #FFFFFF;
+    --header-accent: #d4cbc7;
+    --body-background: #F8F8F8;
+    --body-text: #333333;
+    --body-accent: #FFA500;
+    --footer-background: #333333;
+    --footer-text: #FFFFFF;
+    --footer-accent: #FF6347;
+}
+
 body {
     margin: 0;
     padding: 0;

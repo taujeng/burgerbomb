@@ -3,14 +3,18 @@
 
 
 .header {
-    border-bottom: 2px darkgray solid;
+
+    // border-bottom: 2px darkgray solid;
+    border-bottom: 2px var(--header-accent) solid;
     // height: 10vh;
     z-index: 10;
-    background-color: lightcyan;
+    // background-color: lightcyan;
+    background-color: var(--header-secondary);
 }
 
 #main-logo {
     h1 {
+        color: var(--title);
         font-weight: 700;
         text-transform: uppercase;
     }
@@ -62,19 +66,34 @@
 .navbar-collapse {
     justify-content: flex-end;
     align-items: center;
-    background-color: lightcyan;
 
     .nav-link {
+        position: relative;
         font-size: 2em;
         font-weight: 600;
-        padding: 0 10px;
+        padding: 0 20px;
+        color: var(--header-primary);
+        transition: color 0.1s ease-in;
         #bag-icon {
             margin: 0 0 10px 20px;
         }
     }
     .nav-link:hover {
-        color: #crimson;
+        color: var(--header-primary-hover);
         font-weight: 600;
+    }
+    .nav-link::after {
+        height: 0.1em;
+        bottom: -0.1em;
+        content: "";
+        left: 0.4em;
+        position: absolute;
+        background-color: var(--header-primary-hover);
+        width: 0;
+        transition: width 0.2s;
+    }
+    .nav-link:hover:after {
+        width: 30%;
     }
 }
 

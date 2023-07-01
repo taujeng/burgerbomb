@@ -20,10 +20,12 @@
   src: url(https://fonts.gstatic.com/s/belanosima/v1/3y9n6bI8ejDo_3MfCDSL_Lx0M3o.ttf) format('truetype');
 }
 .header {
-  border-bottom: 2px darkgray solid;
+  border-bottom: 2px var(--header-accent) solid;
   z-index: 10;
+  background-color: var(--header-secondary);
 }
 #main-logo h1 {
+  color: var(--title);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -75,15 +77,32 @@
   align-items: center;
 }
 .navbar-collapse .nav-link {
-  font-size: 1.5em;
-  padding: 0 10px;
+  position: relative;
+  font-size: 2em;
+  font-weight: 600;
+  padding: 0 20px;
+  color: var(--header-primary);
+  transition: color 0.1s ease-in;
 }
 .navbar-collapse .nav-link #bag-icon {
   margin: 0 0 10px 20px;
 }
 .navbar-collapse .nav-link:hover {
-  color: #ff2424;
+  color: var(--header-primary-hover);
   font-weight: 600;
+}
+.navbar-collapse .nav-link::after {
+  height: 0.1em;
+  bottom: -0.1em;
+  content: "";
+  left: 0.4em;
+  position: absolute;
+  background-color: var(--header-primary-hover);
+  width: 0;
+  transition: width 0.2s;
+}
+.navbar-collapse .nav-link:hover:after {
+  width: 30%;
 }
 @media (max-width: 768px) {
   #bomb-logo {
