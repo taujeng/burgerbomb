@@ -23,11 +23,31 @@
   border-bottom: 2px var(--header-accent) solid;
   z-index: 10;
   background-color: var(--header-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 5% 0 10%;
+}
+.header #bag-icon {
+  width: 50px;
+  height: 50px;
+  color: var(--header-primary);
+}
+.header #bag-icon:hover {
+  color: var(--header-primary-hover);
+}
+#main-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #main-logo h1 {
   color: var(--title);
   font-weight: 700;
   text-transform: uppercase;
+  font-size: 2em;
+  margin-bottom: 0;
 }
 #main-logo h1:hover {
   color: crimson;
@@ -75,6 +95,7 @@
 .navbar-collapse {
   justify-content: flex-end;
   align-items: center;
+  margin-right: 10%;
 }
 .navbar-collapse .nav-link {
   position: relative;
@@ -105,16 +126,40 @@
   width: 30%;
 }
 @media (max-width: 768px) {
-  #bomb-logo {
+  .header {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+  }
+  .header #main-logo {
+    font-size: 16px;
+  }
+  .header #main-logo h1 {
+    margin-bottom: 0;
+    margin: 0 15% 0 0;
+  }
+  .header #bag-icon {
     height: 35px;
-    width: 35px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+  .navbar-collapse .nav-link {
+    font-size: 1.5em;
+  }
+  .navbar-toggler {
+    order: -1;
   }
   .navbar-collapse {
     width: 100vw !important;
-    padding: 0 10%;
+    margin-top: 10px;
+    padding: 0 5%;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin-right: auto;
+    margin-left: 10px;
+    /* Add margin to the left */
   }
 }

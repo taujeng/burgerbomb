@@ -14,7 +14,7 @@ const Menu = () => {
               <img src="./images/menu/burger4.png" alt="a juicy burger" className="menu-image" />
             </div>
             <div className="item-text">
-              <b>Burger</b>
+              <b>Burgers</b>
               
             </div>
           </div>

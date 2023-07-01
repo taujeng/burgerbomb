@@ -6,8 +6,7 @@ import "./header.css"
 
 const Header = () => {
   return (
-        <Navbar collapseOnSelect expand="lg" className="header justify-content-center">
-            <Container className="">
+        <Navbar collapseOnSelect expand="lg" className="header">
                 <LinkContainer to="/">
                     <Navbar.Brand className='mx-auto' id="main-logo">
                         {/* <img src="./images/logo.svg" alt="Burger Bomb" id="bomb"/> */}
@@ -16,7 +15,7 @@ const Header = () => {
                     </Navbar.Brand>
                 </LinkContainer>
 
-                <Navbar.Toggle aria-controls="responsive-nav" />
+                <Navbar.Toggle aria-controls="responsive-nav" className="custom-toggler"/>
                 <Navbar.Collapse id="responsive-nav" className="header-links justify-content-end">
                     <LinkContainer to="/menu">
                         <Nav.Link>Menu</Nav.Link>
@@ -27,11 +26,11 @@ const Header = () => {
                     <LinkContainer to="/values">
                         <Nav.Link>Our Values</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/bag">
-                        <Nav.Link><BagFill id="bag-icon" size={32}/></Nav.Link>
-                    </LinkContainer>
                 </Navbar.Collapse>
-            </Container>
+                
+                <LinkContainer to="/bag">
+                        <Nav.Link><BagFill id="bag-icon" size={32}/></Nav.Link>
+                </LinkContainer>
         </Navbar>
 
   )
