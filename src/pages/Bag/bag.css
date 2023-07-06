@@ -21,7 +21,7 @@
   font-size: 1.5em;
 }
 .bag-container .full-bag-btn {
-  background-color: green;
+  background-color: var(--selected-green);
   border: white 2px solid;
 }
 .bag-container .option {

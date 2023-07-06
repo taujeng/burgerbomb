@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 30px 0;
+  color: var(--text-primary);
 }
 .burgers-container .burgers-intro {
   display: flex;
@@ -40,8 +41,7 @@
   border: white 2px solid;
   text-decoration: none;
   border-radius: 0.25rem;
-  color: grey;
-  background-color: #ee7e7e;
+  background-color: var(--button-disabled);
   margin: 15px 0 15px;
 }
 .burgers-container .burger-addToOrder .active-btn {
@@ -49,8 +49,8 @@
   border: white 2px solid;
   text-decoration: none;
   border-radius: 10px;
-  color: black;
-  background-color: crimson;
+  color: var(--text-primary);
+  background-color: var(--button-active);
   margin: 15px 0 15px;
 }
 @media (max-width: 768px) {

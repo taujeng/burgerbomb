@@ -3,16 +3,12 @@
 
 :root {
     --title: rgb(173, 33, 24);
-    --header-primary: #451400;
-    --header-primary-hover: #ad2118;
-    --header-secondary: #FFFFFF;
-    --header-accent: #d4cbc7;
-    --body-background: #F8F8F8;
-    --body-text: #333333;
-    --body-accent: #FFA500;
-    --footer-background: #333333;
-    --footer-text: #FFFFFF;
-    --footer-accent: #FF6347;
+    --border-light: #d4cbc7; 
+    --text-primary: #451400;
+    --text-primary-hover: #ad2118;
+    --selected-green: rgba(176,219,118,1.00);
+    --button-disabled: rgb(238, 126, 126);
+    --button-active: crimson;
 }
 
 body {

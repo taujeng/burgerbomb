@@ -35,6 +35,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--text-primary);
 }
 .menu-container .menu-item .item-text b {
   text-transform: uppercase;
