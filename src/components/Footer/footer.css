@@ -4,6 +4,7 @@
   align-items: center;
   border-top: 2px darkgrey solid;
   padding-top: 20px;
+  color: var(--text-primary);
 }
 .footer-container .footer-icon {
   height: 30px;
