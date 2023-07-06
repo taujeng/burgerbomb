@@ -16,14 +16,14 @@
     width: 100%;
     padding: 0 5% 0 10%;
 
-    #bag-icon {
-        width: 50px;
-        height: 50px;
-        color: var(--text-primary)
-    }
-    #bag-icon:hover {
-        color:var(--text-primary-hover);
-    }
+    // #bag-icon {
+    //     width: 50px;
+    //     height: 50px;
+    //     color: var(--text-primary)
+    // }
+    // #bag-icon:hover {
+    //     color:var(--text-primary-hover);
+    // }
 }
 
 #main-logo {
@@ -124,22 +124,26 @@
         padding: 2%;
         display: flex;
         align-items: center;
-    
         #main-logo {
             font-size: 16px;
             h1 {
                 margin-bottom: 0;
-                margin: 0 15% 0 0;
+                margin: 0 5% 0 0;
             }
         }
-        #bag-icon {
-            height: 35px;
-            position: absolute;
-            right: 0;
-            top: 10px;
-        }
-
     }
+
+    .bagIcon-container {
+        margin-right: 1%;
+        .header-bag.bag-icon {
+            height: 35px;
+            width: 35px;
+        }
+        h1 {
+            font-size: 0.8em;
+        }
+    }
+
     .navbar-collapse {
         .nav-link {
             font-size: 1.5em;

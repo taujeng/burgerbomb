@@ -23,11 +23,11 @@ const App = () => {
 
   return (
     <div>
-      <Header/>
       <OrderContext.Provider value={{order, setOrder}}>
+        <Header/>
         <Outlet />
+        <Footer />
       </OrderContext.Provider>
-      <Footer />
     </div>
   )
 }

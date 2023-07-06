@@ -29,14 +29,6 @@
   width: 100%;
   padding: 0 5% 0 10%;
 }
-.header #bag-icon {
-  width: 50px;
-  height: 50px;
-  color: var(--text-primary);
-}
-.header #bag-icon:hover {
-  color: var(--text-primary-hover);
-}
 #main-logo {
   display: flex;
   align-items: center;
@@ -136,13 +128,17 @@
   }
   .header #main-logo h1 {
     margin-bottom: 0;
-    margin: 0 15% 0 0;
+    margin: 0 5% 0 0;
   }
-  .header #bag-icon {
+  .bagIcon-container {
+    margin-right: 1%;
+  }
+  .bagIcon-container .header-bag.bag-icon {
     height: 35px;
-    position: absolute;
-    right: 0;
-    top: 10px;
+    width: 35px;
+  }
+  .bagIcon-container h1 {
+    font-size: 0.8em;
   }
   .navbar-collapse .nav-link {
     font-size: 1.5em;
