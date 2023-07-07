@@ -18,6 +18,7 @@ const Burgers = () => {
     const [burgerPrice, setBurgerPrice] = useState(0);
     const [burgerType, setBurgerType] = useState(false);
     const [bunChoice, setBunChoice] = useState(false);
+    const [cheeseChoice, setCheeseChoice] = useState(false);
     const [vegChoices, setVegChoices] = useState([]);
     const [quantity, setQuantity] = useState(1);
 
@@ -30,7 +31,7 @@ const Burgers = () => {
         veggieList.forEach(item => veggiePrice += item.price)
         setBurgerPrice(pattyPrice + veggiePrice)
 
-    },[burgerType, vegChoices, bunChoice, quantity])
+    },[burgerType, vegChoices, bunChoice, quantity, cheeseChoice])
     
     const addOrder = () => {
         console.log(burgerData.veggies.filter((x)=> vegChoices.includes(x.name)))
@@ -40,7 +41,7 @@ const Burgers = () => {
             itemName: burgerType + " burger", 
             itemPrice: burgerPrice,
             itemQuantity: quantity,
-            itemDescription: [burgerType, bunChoice, ...vegChoices],
+            itemDescription: [burgerType, bunChoice, cheeseChoice, ...vegChoices],
         };   
         setOrder([...order, burgerSummary]);
         // Navigate back to menu
@@ -88,6 +89,16 @@ const Burgers = () => {
                             selection={bunChoice}
                             setSelection={setBunChoice}
 
+                        />))}
+                    </ul>
+                </section>
+                <section>
+                    <h3>Cheese</h3>
+                    <ul>
+                        {burgerData.cheese.map((item)=> (<Item key={item.id} info={item}
+                            singleSelection={true}
+                            selection={cheeseChoice}
+                            setSelection={setCheeseChoice}
                         />))}
                     </ul>
                 </section>

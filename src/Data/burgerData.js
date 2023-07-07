@@ -1,22 +1,25 @@
 const burgerData = {
     buns: [
-        { id: 1, name: 'Plain Bun', price: 0 },
-        { id: 2, name: 'Seeded Bun', price: 0 },
-        { id: 3, name: 'Brioche Bun', price: 0.5 },
-        { id: 4, name: 'Lettuce Wrap', price: 0 },
+        { id: 1, name: 'Classic Bun', price: 0, image:"/images/menu/burgers/classicbun.png" },
+        { id: 3, name: 'Brioche Bun', price: 0, image:"/images/menu/burgers/briochebun.png"  },
+        { id: 4, name: 'Lettuce Wrap', price: 0, image:"/images/menu/burgers/lettucebun.png"  },
         { id: 5, name: 'No Bun', price: 0 },
       ],
       meat: [
-        { id: 1, name: 'Beef', price: 6 },
-        { id: 2, name: 'Chicken', price: 5 },
-        { id: 3, name: 'Veggie', price: 4 }
+        { id: 1, name: 'Beef', price: 6, image: "/images/menu/burgers/burger4.png" },
+        { id: 2, name: 'Fried Chicken', price: 5, image: "/images/menu/burgers/chickenburger.png" },
+        { id: 3, name: 'Veggie', price: 4, image: "/images/menu/burgers/veganburger.png" }
       ],
       veggies: [
-        { id: 1, name: 'Lettuce', price: 0 },
-        { id: 2, name: 'Tomato', price: 1 },
-        { id: 3, name: 'Onions', price: 1 },
-        { id: 5, name: 'Pickles', price: 0.5 },
+        { id: 1, name: 'Lettuce', price: 0, image: "/images/menu/burgers/lettuce.png" },
+        { id: 2, name: 'Tomato', price: 0.5, image: "/images/menu/burgers/tomato.png"},
+        { id: 3, name: 'Onions', price: 0.5, image: "/images/menu/burgers/onions.png" },
+        { id: 4, name: 'Avocado', price: 2,  image: "/images/menu/burgers/avocado.png"},
         { id: 6, name: 'Jalapeños', price: 0.5 },
+      ],
+      cheese: [
+        { id: 1, name: "American Cheese", price: 0},
+        { id: 2, name: "No Cheese", price: 0}
       ],
       sauce: [
         { id: 1, name: 'Ketchup', price: 0 },

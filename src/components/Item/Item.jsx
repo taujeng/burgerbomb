@@ -31,10 +31,18 @@ const Item = ( {info, singleSelection, selection, setSelection} ) => {
 
   return (
     <Card className="item-container" onClick={handleClick} style={{backgroundColor: selected ? "rgba(176,219,118,1.00)" : null}}>
-        <Card.Title>
-            {info.name}
-        </Card.Title>
-        {info.price > 0 ? formatPrice(info.price) : ""}  
+        {info.image ?
+          <div className="image-container">
+            <img className="item-image" src={info.image} alt="" /> 
+          </div>
+
+         : null}
+        <div className="item-right">
+          <div>{info.name}</div>
+          <div>{info.price > 0 ? formatPrice(info.price) : ""} </div>
+        </div> 
+
+
     </Card>
   )
 }

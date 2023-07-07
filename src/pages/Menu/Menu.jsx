@@ -11,7 +11,7 @@ const Menu = () => {
         <LinkContainer to='/menu/burgers'>
           <div className="menu-item">
             <div className="wrapper">
-              <img src="./images/menu/burger4.png" alt="a juicy burger" className="menu-image" />
+              <img src="./images/menu/burgers/burger4.png" alt="a juicy burger" className="menu-image" />
             </div>
             <div className="item-text">
               <b>Burgers</b>
