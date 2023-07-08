@@ -11,7 +11,7 @@ const Menu = () => {
         <LinkContainer to='/menu/burgers'>
           <div className="menu-item">
             <div className="wrapper">
-              <img src="./images/menu/burgers/burger4.png" alt="a juicy burger" className="menu-image" />
+              <img src="./images/menu/burgers/burger.png" alt="a juicy burger" className="menu-image" />
             </div>
             <div className="item-text">
               <b>Burgers</b>
@@ -22,7 +22,7 @@ const Menu = () => {
         <LinkContainer to='/menu/sides'>
           <div className="menu-item">
             <div className="wrapper">
-              <img src="./images/menu/sides1.png" alt="hot sides" className="menu-image" />
+              <img src="./images/menu/sides/sides.png" alt="hot sides" className="menu-image" />
             </div>
             <div className="item-text">
               <b>Sides</b>
@@ -36,7 +36,7 @@ const Menu = () => {
         <LinkContainer to='/menu/salads'>
           <div className="menu-item">
             <div className="wrapper">
-              <img src="./images/menu/salad.png" alt="a fresh salad" className="menu-image" />
+              <img src="./images/menu/salads/greeksalad.png" alt="a fresh salad" className="menu-image" />
             </div>
             <div className="item-text">
               <b>Salads</b>
@@ -46,7 +46,7 @@ const Menu = () => {
         <LinkContainer to='/menu/drinks'>
           <div className="menu-item">
                 <div className="wrapper">
-                  <img src="./images/menu/drink1.png" alt="a cold drink" className="menu-image" />
+                  <img src="./images/menu/drinks/lemonade.png" alt="a cold drink" className="menu-image" />
 
                 </div>
                 <div className="item-text">

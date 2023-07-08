@@ -35,6 +35,11 @@ const ChoicesItem = ( {info, name, setName, setSizes} ) => {
     <div className={`choicesItem-container ${open ? "active" : ""}` } >
         <button className={`choicesItem-main ${selected ? "selected": ""}`}
          onClick={handleMain}>
+            {info.image && 
+                <div className="choiceItem-image-overlay">
+                    <img className="choiceItem-image" src={info.image} alt=""></img>
+                </div>
+            }
             <div className="choicesItem-main-body">
                 <Card.Title>{info.name}</Card.Title>
                 {formatPrice(info["price"][size])}

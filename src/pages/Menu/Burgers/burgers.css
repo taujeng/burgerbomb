@@ -61,6 +61,7 @@
     display: flex;
     margin: 0;
     flex-wrap: wrap;
+    padding: 0;
   }
   .burgers-container .burger-total {
     margin-top: 25px;
