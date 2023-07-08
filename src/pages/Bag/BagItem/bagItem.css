@@ -48,6 +48,7 @@
 .bagItem-container .bagItem-right {
   align-self: end;
   font-size: 1.3em;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .bagItem-container {

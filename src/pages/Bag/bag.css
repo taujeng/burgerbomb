@@ -46,6 +46,13 @@
 .bag-container .empty-bag p {
   max-width: 80%;
 }
+.bag-container .bag-options .empty-bag-btn {
+  background-color: var(--button-active);
+  border: none;
+}
+.bag-container .bag-options .full-bag-btn {
+  background-color: green;
+}
 @media (max-width: 768px) {
   .bag-container {
     padding: 25px 25px;
