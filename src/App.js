@@ -5,10 +5,12 @@ import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import { inject } from '@vercel/analytics/*'
 
-inject();
+
 
 
 export const OrderContext = createContext();
+
+inject();
 
 const App = () => {
 
