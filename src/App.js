@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
 import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
-import { inject } from '@vercel/analytics/*'
+import { inject } from '@vercel/analytics'
 
 
 
