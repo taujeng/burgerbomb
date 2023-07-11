@@ -20,14 +20,14 @@
   src: url(https://fonts.gstatic.com/s/belanosima/v1/3y9n6bI8ejDo_3MfCDSL_Lx0M3o.ttf) format('truetype');
 }
 .header {
-  border-bottom: 2px var(--header-accent) solid;
+  border-bottom: 1px #d4cbc7 solid;
   z-index: 10;
   background-color: var(--header-secondary);
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 5% 0 10%;
+  padding: 0 5% 1% 10%;
 }
 #main-logo {
   display: flex;
