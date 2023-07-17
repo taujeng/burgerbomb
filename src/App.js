@@ -1,7 +1,7 @@
 import React, {useState, createContext} from 'react'
 import { Outlet } from 'react-router-dom'
 import { v4 as uuid } from 'uuid'
-import Header from './components/Header/Header.jsx'
+import NavigationBar from './components/NavigationBar/NavigationBar.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import { inject } from '@vercel/analytics'
 
@@ -29,7 +29,7 @@ const App = () => {
   return (
     <div>
       <OrderContext.Provider value={{order, setOrder}}>
-        <Header/>
+        <NavigationBar/>
         <Outlet />
         <Footer />
       </OrderContext.Provider>

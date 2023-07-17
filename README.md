@@ -1,6 +1,6 @@
 # To Do
 - [ ] For the Menu page, the rows are not fully aligned: compare the item-text
-- [ ] Chipotle's color theme: Header (white), body (white), footer (brown)
+- [ ] Chipotle's color theme: NavigationBar (white), body (white), footer (brown)
 - - [ ] Thinking of just adding a light brown for body, white header/footer
 - [ ] 1024x768: Landing Page dimensions are off. landing-hero has too much white space
 - [ ] 

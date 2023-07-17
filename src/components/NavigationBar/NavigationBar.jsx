@@ -2,9 +2,9 @@ import React from 'react'
 import { Container, Row, Col, Stack, Navbar, NavItem, Nav, Collapse} from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import BagIcon from '../BagIcon/BagIcon'
-import "./header.css"
+import "./navigationBar.css"
 
-const Header = () => {
+const NavigationBar = () => {
   return (
         <Navbar collapseOnSelect expand="lg" className="header">
                 <LinkContainer to="/">
@@ -36,7 +36,7 @@ const Header = () => {
   )
 }
 
-export default Header
+export default NavigationBar
 
 
 
