@@ -6,7 +6,7 @@ import "./navigationBar.css"
 
 const NavigationBar = () => {
   return (
-        <Navbar collapseOnSelect expand="lg" className="header">
+        <Navbar collapseOnSelect expand="lg" className="header" id="top">
                 <LinkContainer to="/">
                     <Navbar.Brand className='mx-auto' id="main-logo">
                         {/* <img src="./images/logo.svg" alt="Burger Bomb" id="bomb"/> */}
@@ -20,8 +20,8 @@ const NavigationBar = () => {
                     <LinkContainer to="/menu">
                         <Nav.Link>Menu</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/rewards">
-                        <Nav.Link>Rewards</Nav.Link>
+                    <LinkContainer to="/our-story">
+                        <Nav.Link>Our Story</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/values">
                         <Nav.Link>Our Values</Nav.Link>
