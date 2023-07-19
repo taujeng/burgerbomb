@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 .footer-container .footer-icon:hover {
-  color: var(--button-active);
+  color: var(--text-primary-hover);
 }
 .footer-container .footer-links {
   width: 100%;

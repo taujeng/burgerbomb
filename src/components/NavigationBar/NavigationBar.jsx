@@ -23,8 +23,8 @@ const NavigationBar = () => {
                     <LinkContainer to="/our-story">
                         <Nav.Link>Our Story</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/values">
-                        <Nav.Link>Our Values</Nav.Link>
+                    <LinkContainer to="/rewards">
+                        <Nav.Link>Rewards</Nav.Link>
                     </LinkContainer>
                 </Navbar.Collapse>
                 <BagIcon className="header-bag"/>

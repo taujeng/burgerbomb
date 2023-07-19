@@ -39,9 +39,13 @@
   margin: 50px;
 }
 .bag-container .empty-bag .empty-bag-btn {
-  background-color: crimson;
-  border: white 2px solid;
+  background-color: var(--text-primary-hover);
+  border: none;
   width: 100px;
+  text-transform: uppercase;
+}
+.bag-container .empty-bag .empty-bag-btn:hover {
+  color: black;
 }
 .bag-container .empty-bag p {
   max-width: 80%;

@@ -24,8 +24,11 @@
 }
 .landing-container .landing-hero .landing-text .landing-btn {
   margin: 2em 0 0 2em;
-  background-color: var(--button-active);
+  background-color: var(--text-primary-hover);
   border: white 2px solid;
+}
+.landing-container .landing-hero .landing-text .landing-btn:hover {
+  color: black;
 }
 .landing-container .landing-two {
   margin: 7% 0 2%;

@@ -1,0 +1,105 @@
+.rewards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.7;
+  margin: 5% 0;
+}
+.rewards-container section {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+.rewards-container section img {
+  max-width: 25%;
+  height: 450px;
+  object-fit: contain;
+}
+.rewards-container section .rewards-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  max-width: 25%;
+}
+.rewards-container section .rewards-text h1 {
+  color: var(--text-primary-hover);
+}
+.rewards-container section .rewards-text h2 {
+  text-wrap: balance;
+}
+.rewards-container section .rewards-text .rewards-joinNow {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 5px;
+  border-radius: 0.1em;
+  font-size: 1.5em;
+  padding: 10px 30px;
+  background-color: var(--text-primary-hover);
+}
+.rewards-container section .rewards-text .rewards-joinNow:hover {
+  color: black;
+  border: 1px black solid;
+}
+.rewards-container h2 {
+  color: var(--text-primary);
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.rewards-container .mobile-app {
+  margin: 50px;
+}
+.rewards-container .mobile-app .android-link {
+  height: 90px;
+  width: 210px;
+}
+.rewards-container .mobile-app .apple-link {
+  width: 240px;
+  height: 60px;
+}
+.rewards-container .rewards-arrowTop {
+  font-size: 3em;
+  color: var(--text-primary);
+}
+.rewards-container .rewards-arrowTop:hover {
+  color: var(--text-primary-hover);
+}
+@media (max-width: 768px) {
+  .rewards-container {
+    font-size: 0.8em;
+    line-height: 1.2;
+  }
+  .rewards-container section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .rewards-container section img {
+    max-width: 90%;
+    height: 200px;
+  }
+  .rewards-container section .rewards-text {
+    max-width: 90%;
+  }
+  .rewards-container section .rewards-text .rewards-joinNow {
+    font-size: 1em;
+  }
+  .rewards-container .rewards-section3 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .rewards-container h2 {
+    margin-top: 15px;
+    font-size: 1.2em;
+  }
+  .rewards-container .mobile-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

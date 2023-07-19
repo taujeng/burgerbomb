@@ -18,6 +18,7 @@ import sidesData from './Data/sidesData'
 import drinksData from './Data/drinksData'
 import Construction from './pages/Construction/Construction';
 import OurStory from './pages/OurStory/OurStory';
+import Rewards from './pages/Rewards/Rewards';
 
 
 const router = createBrowserRouter(
@@ -30,7 +31,7 @@ const router = createBrowserRouter(
       <Route path="/menu/sides" element={<Choices data={sidesData}/>}/>
       <Route path="/menu/drinks" element={<Choices data={drinksData}/>}/>
       <Route path="/our-story" element={<OurStory />}/>
-      <Route path="/values" element={<Construction />}/>
+      <Route path="/rewards" element={<Rewards />}/>
       <Route path="/bag" element={<Bag />}/>
       <Route path="/checkout" element={<Construction />}/>
     </Route>
